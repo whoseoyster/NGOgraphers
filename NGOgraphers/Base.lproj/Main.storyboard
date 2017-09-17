@@ -1,0 +1,874 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6VU-wD-B2z">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="adelle-sans.otf">
+            <string>AdelleSans-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KfM-N5-ZDm" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZ7-DO-gJ6">
+                                <rect key="frame" x="94" y="125" width="335" height="497"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Layers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYB-Nz-Ob5">
+                                        <rect key="frame" x="56" y="8" width="66" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNl-F7-uBG" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="63" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Literacy Rate">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="literacyButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5j0-De-x9I"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-Ky-sbH" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="107" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Earthquakes">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="earthquakesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFY-Uq-zQd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2rL-3w-Qel" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="239" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Development Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="developmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEd-xC-uiI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfp-F2-jUi">
+                                        <rect key="frame" x="187" y="8" width="116" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FG0-Kk-jzL" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="239" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Clean Water">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="waterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5XZ-wX-5OH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gb7-qc-RLN" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="195" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Environmental">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="environmentalClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2F4-HC-je2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PMu-BE-Tvl" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="195" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Deforestation">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="deforestationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dye-U0-Pta"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WFn-iC-Soh" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="151" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Nutrition Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undernourishedClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ERD-Pn-s0w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Q7P-Ax-N2H" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="151" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Health">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="healthClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ylU-Ha-D0Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="7ir-Sf-gBI" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="63" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Education">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="educationClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xlr-Ev-8XV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Smart Layers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWA-fn-7CG">
+                                        <rect key="frame" x="-2" y="310" width="327" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="0Ln-gV-JlW" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="374" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Zeren Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="zerenClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GuD-QQ-zHy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="pQ9-4d-mA3" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="427" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Viola Water Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="violaWaterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LKj-lg-jpU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="bA9-ue-HEo" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="374" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Viola Education Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="violaEdClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOX-P7-OIR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PbN-3s-ZNE" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="427" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Viola Health Index">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="violaHealthClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxv-ka-Zdb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Dwq-nV-rLN" customClass="CustomButton" customModule="NGOgraphers" customModuleProvider="target">
+                                        <rect key="frame" x="184" y="107" width="119" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                        <state key="normal" title="Disaster Relief">
+                                            <color key="titleColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="disasterClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tvf-pq-K9Z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byT-w9-0rz">
+                                <rect key="frame" x="0.0" y="714" width="414" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33376953124999997" green="0.33376953124999997" blue="0.33376953124999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KfM-N5-ZDm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="AYP-70-xCx"/>
+                            <constraint firstAttribute="trailing" secondItem="KfM-N5-ZDm" secondAttribute="trailing" id="Cxv-vg-a9T"/>
+                            <constraint firstItem="KfM-N5-ZDm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Kkr-H6-6Qw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KfM-N5-ZDm" secondAttribute="bottom" id="Pmm-PX-Yao"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="vDP-I0-AaS">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="eEx-YP-Jb8">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="dWU-75-BmF" kind="presentation" id="LN1-2R-Tbn"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="question2" id="56L-R3-eht">
+                                <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="showLegend:" destination="BYZ-38-t0r" id="TjW-Qi-4rF"/>
+                                    <segue destination="LHH-Hq-jLK" kind="show" id="gDa-z1-blg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="filter_funnel" id="7ok-QT-FYO">
+                                <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="filterButtonClicked:" destination="BYZ-38-t0r" id="Xii-wM-lEx"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="deforestationButton" destination="PMu-BE-Tvl" id="5N2-G5-A9y"/>
+                        <outlet property="devButton" destination="2rL-3w-Qel" id="1LT-no-RAE"/>
+                        <outlet property="disButton" destination="Dwq-nV-rLN" id="jXL-l5-NDw"/>
+                        <outlet property="earthButton" destination="V4x-Ky-sbH" id="gJK-pe-Rls"/>
+                        <outlet property="educationButton" destination="7ir-Sf-gBI" id="VgX-5R-Y07"/>
+                        <outlet property="envButton" destination="Gb7-qc-RLN" id="5zx-8I-Vso"/>
+                        <outlet property="filterView" destination="uZ7-DO-gJ6" id="K2Z-ce-miS"/>
+                        <outlet property="healthButton" destination="Q7P-Ax-N2H" id="DIr-Ih-fJy"/>
+                        <outlet property="litButton" destination="pNl-F7-uBG" id="mTx-hU-613"/>
+                        <outlet property="mapView" destination="KfM-N5-ZDm" id="zmo-Jg-ahh"/>
+                        <outlet property="underButton" destination="WFn-iC-Soh" id="Zpx-yj-Zud"/>
+                        <outlet property="violaEdButton" destination="bA9-ue-HEo" id="nx0-zz-HPe"/>
+                        <outlet property="violaHealthButton" destination="PbN-3s-ZNE" id="NnB-Kk-xZZ"/>
+                        <outlet property="violaWaterButton" destination="pQ9-4d-mA3" id="joQ-UO-b0j"/>
+                        <outlet property="watButton" destination="FG0-Kk-jzL" id="CIS-nt-90G"/>
+                        <outlet property="zerenButton" destination="0Ln-gV-JlW" id="Bet-hQ-lTO"/>
+                        <segue destination="E4S-PF-Rfv" kind="show" identifier="showProject" id="AE3-I9-hd7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1024.6376811594205" y="121.46739130434784"/>
+        </scene>
+        <!--Legend-->
+        <scene sceneID="Ba1-jt-UTR">
+            <objects>
+                <viewController id="LHH-Hq-jLK" customClass="legViewController" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pTR-0r-1q2"/>
+                        <viewControllerLayoutGuide type="bottom" id="drz-iw-vi3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lvG-r0-5Pe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adult Literacy Rate by Country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r02-lZ-vAL">
+                                <rect key="frame" x="0.0" y="72" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-lq-y5C">
+                                <rect key="frame" x="20" y="110" width="374" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkT-4U-Xeo" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="148" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78412288427352905" green="0.78830087184906006" blue="0.78818613290786743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLT-Rf-g5O" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="198" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87895625829696655" green="0.85032349824905396" blue="0.88319319486618042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j6x-IN-SaW" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="248" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.69243228435516357" green="0.73975980281829834" blue="0.82705467939376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="747-OI-Q04" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="298" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36684602499008179" green="0.60594278573989868" blue="0.73945653438568115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5cv-1I-a4L" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="348" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1067989245057106" green="0.51403516530990601" blue="0.54865866899490356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnk-oc-vUW" customClass="CustomView2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="38" y="398" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0091125285252928734" green="0.38217085599899292" blue="0.31728670001029968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-Fp-cpe">
+                                <rect key="frame" x="97" y="146" width="297" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Up to 50%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tt9-c7-sIr">
+                                <rect key="frame" x="97" y="196" width="324" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="50.1 to 65%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pya-pp-u8K">
+                                <rect key="frame" x="97" y="246" width="324" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="65.1 to 80%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHW-ja-z0O">
+                                <rect key="frame" x="97" y="296" width="324" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="80.1 to 95%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGu-id-kJZ">
+                                <rect key="frame" x="97" y="346" width="324" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Above 95%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKn-nA-aeA">
+                                <rect key="frame" x="97" y="396" width="324" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Legend" id="nMS-MH-BIP">
+                        <barButtonItem key="leftBarButtonItem" image="arrow_left" id="Yyo-yX-evo">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backButton:" destination="LHH-Hq-jLK" id="h8d-Xh-7pt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bhj-Fp-wCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039.1304347826087" y="871.46739130434787"/>
+        </scene>
+        <!--Project Details-->
+        <scene sceneID="q0V-Xp-tkC">
+            <objects>
+                <viewController id="E4S-PF-Rfv" customClass="projectViewController" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oHP-jm-qRQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiJ-xc-oum"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NtK-5f-Adf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOy-IZ-Vrp" customClass="CustomView" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="184" width="374" height="97"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zm-g9-8QP">
+                                        <rect key="frame" x="8" y="0.0" width="358" height="97"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
+                                        <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="15"/>
+                                        <color key="textColor" red="0.43456801470588236" green="0.43456801470588236" blue="0.43456801470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-EV-uk5" customClass="CustomView" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="365" width="374" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="552-IS-PIF" customClass="CustomButton2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="612" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="20"/>
+                                <state key="normal" title="Donate Now">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donatePressed:" destination="E4S-PF-Rfv" eventType="touchUpInside" id="PJ4-d0-yE6"/>
+                                    <segue destination="SJv-Ld-yUe" kind="show" id="Fyv-un-aPX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWt-30-NRS">
+                                <rect key="frame" x="85" y="129" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="by Southern Environmental Law Center" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H86-hu-dDi">
+                                <rect key="frame" x="0.0" y="117" width="414" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="16"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NC Water Clean-Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCu-8w-jos">
+                                <rect key="frame" x="0.0" y="75" width="414" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tL3-8J-thJ">
+                                <rect key="frame" x="20" y="112" width="374" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CLEAN WATER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZB-zJ-BJS">
+                                <rect key="frame" x="20" y="157" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <color key="textColor" red="0.42776872304174368" green="0.55832752217117487" blue="0.75197265624999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQq-OL-FqE" customClass="CustomButton2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="299" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="20"/>
+                                <state key="normal" title="View StoryMap">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewStorymapPressed:" destination="E4S-PF-Rfv" eventType="touchUpInside" id="i7r-lW-Bp2"/>
+                                    <segue destination="bkU-E3-aB2" kind="show" id="XoC-1o-jbs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_group_309042-2" translatesAutoresizingMaskIntoConstraints="NO" id="ecx-18-TzJ">
+                                <rect key="frame" x="43" y="369" width="115" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="34 DONORS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rne-ad-O6b">
+                                <rect key="frame" x="49" y="477" width="102" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-3L-qAX">
+                                <rect key="frame" x="256" y="369" width="106" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="28 DAYS TO GO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-Ht-vrJ">
+                                <rect key="frame" x="231" y="476" width="155" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2,800 FUNDED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6P-8f-1tU">
+                                <rect key="frame" x="24" y="576" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2,800 TO GO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIf-xw-MOV">
+                                <rect key="frame" x="278" y="576" width="112" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bEH-VH-s1k" customClass="LinearGraph" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="540" width="374" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="percentage">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outlineColor">
+                                        <color key="value" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="counterColor">
+                                        <color key="value" red="0.0" green="0.62352941179999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJc-In-MyZ" customClass="CustomButton2" customModule="NGOgraphers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="668" width="374" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="20"/>
+                                <state key="normal" title="Volunteer">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donatePressed:" destination="E4S-PF-Rfv" eventType="touchUpInside" id="cQd-um-rco"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project Details" id="wOY-bZ-8TZ">
+                        <barButtonItem key="leftBarButtonItem" image="arrow_left" id="fj9-na-m2d">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backPressed:" destination="E4S-PF-Rfv" id="G6V-9R-WAh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="charityNameLabel" destination="H86-hu-dDi" id="iB2-Pp-Q6s"/>
+                        <outlet property="deadlineLabel" destination="WSf-Ht-vrJ" id="HuO-Y4-AO9"/>
+                        <outlet property="descriptionLabel" destination="1Zm-g9-8QP" id="pa8-dt-0sf"/>
+                        <outlet property="donationGraph" destination="bEH-VH-s1k" id="DgF-v0-rFR"/>
+                        <outlet property="donorsLabel" destination="rne-ad-O6b" id="ko6-bf-aa6"/>
+                        <outlet property="fundedLabel" destination="j6P-8f-1tU" id="OnP-hG-n5D"/>
+                        <outlet property="projectNameLabel" destination="YCu-8w-jos" id="4nB-7R-Ehn"/>
+                        <outlet property="toGoLabel" destination="FIf-xw-MOV" id="5RL-id-MoA"/>
+                        <outlet property="typeLabel" destination="CZB-zJ-BJS" id="V8k-RG-MvT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DsS-Ee-BUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="121.46739130434784"/>
+        </scene>
+        <!--Donate-->
+        <scene sceneID="bLi-05-Vlv">
+            <objects>
+                <viewController id="SJv-Ld-yUe" customClass="donationVC" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ela-7O-x5w"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ez7-Ni-0go"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WDa-8G-SkG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nigerian Famine Foundation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7D-Um-kUY">
+                                <rect key="frame" x="14" y="89" width="215" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <color key="textColor" red="0.42776872300000002" green="0.55832752220000004" blue="0.75197265619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wdI-Vb-Rze">
+                                <rect key="frame" x="297" y="84" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97636479139999999" green="0.97653168440000004" blue="0.9763541818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project: Nigeria Famine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-ff-qDc">
+                                <rect key="frame" x="14" y="137" width="366" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <color key="textColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a note..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bx-Un-fh6">
+                                <rect key="frame" x="14" y="196" width="380" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <color key="textColor" red="0.73152343750000004" green="0.73152343750000004" blue="0.73152343750000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVF-bl-LWS">
+                                <rect key="frame" x="0.0" y="461" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.62352941179999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="17"/>
+                                <state key="normal" title="Finish Donation!">
+                                    <color key="titleColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jBp-j2-7Sx">
+                                <rect key="frame" x="0.0" y="125" width="414" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86186241388320917" green="0.86186241388320917" blue="0.86186241388320917" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xG3-sp-Aue">
+                                <rect key="frame" x="0.0" y="177" width="414" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.86186241389999996" green="0.86186241389999996" blue="0.86186241389999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Donate" id="tpE-Lj-GFU">
+                        <barButtonItem key="leftBarButtonItem" image="arrow_left" id="QK3-bs-TtV">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backPressed:" destination="SJv-Ld-yUe" id="gPd-hq-mx3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="amountTextField" destination="wdI-Vb-Rze" id="vot-8v-dG9"/>
+                        <outlet property="charityLabel" destination="R7D-Um-kUY" id="U6Z-jW-LKy"/>
+                        <outlet property="projectLabel" destination="6ix-ff-qDc" id="TUC-cx-80N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7f4-da-sxo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824.6376811594205" y="946.46739130434787"/>
+        </scene>
+        <!--Project StoryMap-->
+        <scene sceneID="aOQ-51-eNK">
+            <objects>
+                <viewController id="bkU-E3-aB2" customClass="storyMapViewController" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Es-pG-Pra"/>
+                        <viewControllerLayoutGuide type="bottom" id="P5M-PA-OuQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HxF-6a-w09">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oQt-lG-ZUT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Project StoryMap" id="758-At-Mtu">
+                        <barButtonItem key="leftBarButtonItem" image="arrow_left" id="6mU-iX-EnS">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backPressed:" destination="bkU-E3-aB2" id="HNn-MH-Wki"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="oQt-lG-ZUT" id="yOf-Zl-rwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kZ2-Y7-alE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502.898550724638" y="119.83695652173914"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="lMi-Jt-3wW">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="dWU-75-BmF" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PYc-VM-mND">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="iWU-ZQ-wn8" kind="relationship" relationship="rootViewController" id="c2V-cO-jVp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qof-Uc-iLk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="-649"/>
+        </scene>
+        <!--MenuVC-->
+        <scene sceneID="Iz7-MA-p7v">
+            <objects>
+                <viewController id="iWU-ZQ-wn8" customClass="MenuVC" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J62-w4-VeM"/>
+                        <viewControllerLayoutGuide type="bottom" id="5M2-zJ-QhS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pc8-Pk-dFr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8t0-5f-2fW">
+                                <rect key="frame" x="76" y="148" width="169" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zeren" translatesAutoresizingMaskIntoConstraints="NO" id="EFu-bt-fzK">
+                                        <rect key="frame" x="12" y="12" width="145" height="145"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-YO-TSJ">
+                                <rect key="frame" x="-3" y="411" width="328" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                <state key="normal" title="Map">
+                                    <color key="titleColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="iSw-hs-C8x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb5-vc-HQ5">
+                                <rect key="frame" x="-4" y="484" width="328" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                <state key="normal" title="My Profile">
+                                    <color key="titleColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="zed-cS-Fhx" kind="show" id="VZ8-4p-HmY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtc-UX-rpC">
+                                <rect key="frame" x="-4" y="557" width="328" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3q-Vl-I6Z">
+                                <rect key="frame" x="-3" y="314" width="328" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AdelleSans-Thin" family="Adelle Sans" pointSize="21"/>
+                                <state key="normal" title="Zeren Shui">
+                                    <color key="titleColor" red="0.97589106800000003" green="0.97589106800000003" blue="0.97589106800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pFu-o9-wli"/>
+                    <connections>
+                        <outlet property="imageBorderView" destination="8t0-5f-2fW" id="UJr-Jt-ryY"/>
+                        <outlet property="profilePicture" destination="EFu-bt-fzK" id="wNQ-rq-JNe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3yS-75-J4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373.913043478261" y="-650.54347826086962"/>
+        </scene>
+        <!--My Profile-->
+        <scene sceneID="UEw-OO-o0B">
+            <objects>
+                <viewController id="zed-cS-Fhx" customClass="profileViewController" customModule="NGOgraphers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e1g-8t-EY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdm-xZ-uuu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w4t-Fr-BZS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NGO_profile" translatesAutoresizingMaskIntoConstraints="NO" id="KGQ-5l-KXl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97636479139328003" green="0.97653168439865112" blue="0.97635418176651001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Profile" id="jiS-B8-VJn">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="2Hm-yb-Exg">
+                            <color key="tintColor" red="0.74901960779999999" green="0.29411764709999999" blue="0.1137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="dWU-75-BmF" kind="presentation" id="pBT-9g-AeK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDN-k1-MBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3018.840579710145" y="-651.35869565217399"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nXh-fV-hTb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6VU-wD-B2z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Vm1-rv-HYI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="T1q-ji-4Yr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Pi-kx-lb9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.39130434782609" y="121.46739130434784"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5t1-ui-ZxY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vgi-gt-IeL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gd8-4y-ZNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zed-cS-Fhx" kind="relationship" relationship="rootViewController" id="bzK-6p-n7i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="89w-XG-Jyk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2162" y="-650"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NGO_profile" width="1080" height="1920"/>
+        <image name="arrow_left" width="42" height="42"/>
+        <image name="calendar" width="128" height="128"/>
+        <image name="filter_funnel" width="42" height="42"/>
+        <image name="if_group_309042-2" width="512" height="512"/>
+        <image name="menu" width="42" height="42"/>
+        <image name="question2" width="21" height="21"/>
+        <image name="zeren" width="600" height="600"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="iSw-hs-C8x"/>
+        <segue reference="LN1-2R-Tbn"/>
+        <segue reference="VZ8-4p-HmY"/>
+    </inferredMetricsTieBreakers>
+</document>

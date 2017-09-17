@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03FFFCE3031098BD6793CFBA /* Pods_NGOgraphers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 074CAFC8A0008F3187977EFB /* Pods_NGOgraphers.framework */; };
+		F2669A581F4F385C00B2A140 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2B5C4A51F22D36B00576146 /* Info.plist */; };
+		F2669A681F4F3C9B00B2A140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2669A5D1F4F3C9B00B2A140 /* Assets.xcassets */; };
+		F2669A691F4F3C9B00B2A140 /* Coalescer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A5E1F4F3C9B00B2A140 /* Coalescer.swift */; };
+		F2669A6A1F4F3C9B00B2A140 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A5F1F4F3C9B00B2A140 /* Extensions.swift */; };
+		F2669A6B1F4F3C9B00B2A140 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2669A601F4F3C9B00B2A140 /* Info.plist */; };
+		F2669A6C1F4F3C9B00B2A140 /* Legend.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2669A611F4F3C9B00B2A140 /* Legend.storyboard */; };
+		F2669A6D1F4F3C9B00B2A140 /* LegendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A621F4F3C9B00B2A140 /* LegendViewController.swift */; };
+		F2669A6E1F4F3C9B00B2A140 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A631F4F3C9B00B2A140 /* MapViewController.swift */; };
+		F2669A6F1F4F3C9B00B2A140 /* MeasureToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A641F4F3C9B00B2A140 /* MeasureToolbar.swift */; };
+		F2669A701F4F3C9B00B2A140 /* Scalebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A651F4F3C9B00B2A140 /* Scalebar.swift */; };
+		F2669A711F4F3C9B00B2A140 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A661F4F3C9B00B2A140 /* TableViewController.swift */; };
+		F2669A721F4F3C9B00B2A140 /* UnitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2669A671F4F3C9B00B2A140 /* UnitsViewController.swift */; };
+		F26D9B1F1F242B8A005706A7 /* projectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26D9B1E1F242B8A005706A7 /* projectViewController.swift */; };
+		F28818B51F2443BD000BCA85 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818B41F2443BD000BCA85 /* Graph.swift */; };
+		F28818B71F244425000BCA85 /* globalVars.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818B61F244425000BCA85 /* globalVars.swift */; };
+		F28818B91F245218000BCA85 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818B81F245218000BCA85 /* CustomButton.swift */; };
+		F28818BB1F246CBF000BCA85 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818BA1F246CBF000BCA85 /* MenuVC.swift */; };
+		F28818BD1F247A43000BCA85 /* storyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818BC1F247A43000BCA85 /* storyMapViewController.swift */; };
+		F28818C11F250FBC000BCA85 /* donationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818C01F250FBC000BCA85 /* donationVC.swift */; };
+		F28818C31F281BFB000BCA85 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818C21F281BFB000BCA85 /* profileViewController.swift */; };
+		F28818C51F286675000BCA85 /* legViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28818C41F286675000BCA85 /* legViewController.swift */; };
+		F2B5C49A1F22D36B00576146 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5C4991F22D36B00576146 /* AppDelegate.swift */; };
+		F2B5C49C1F22D36B00576146 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2B5C49B1F22D36B00576146 /* ViewController.swift */; };
+		F2B5C49F1F22D36B00576146 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B5C49D1F22D36B00576146 /* Main.storyboard */; };
+		F2B5C4A11F22D36B00576146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2B5C4A01F22D36B00576146 /* Assets.xcassets */; };
+		F2B5C4A41F22D36B00576146 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2B5C4A21F22D36B00576146 /* LaunchScreen.storyboard */; };
+		F2B5C4CF1F23B44B00576146 /* adelle-sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = F2B5C4CE1F23B44B00576146 /* adelle-sans.otf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		074CAFC8A0008F3187977EFB /* Pods_NGOgraphers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NGOgraphers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C930B2C6AE44B9F45EA6336 /* Pods-NGOgraphers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGOgraphers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NGOgraphers/Pods-NGOgraphers.release.xcconfig"; sourceTree = "<group>"; };
+		CCB8CD4506578EDA75519876 /* Pods-NGOgraphers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NGOgraphers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NGOgraphers/Pods-NGOgraphers.debug.xcconfig"; sourceTree = "<group>"; };
+		F2669A5C1F4F3C9B00B2A140 /* ArcGISToolkit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcGISToolkit.h; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/ArcGISToolkit.h"; sourceTree = "<group>"; };
+		F2669A5D1F4F3C9B00B2A140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Assets.xcassets"; sourceTree = "<group>"; };
+		F2669A5E1F4F3C9B00B2A140 /* Coalescer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coalescer.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Coalescer.swift"; sourceTree = "<group>"; };
+		F2669A5F1F4F3C9B00B2A140 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Extensions.swift"; sourceTree = "<group>"; };
+		F2669A601F4F3C9B00B2A140 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Info.plist"; sourceTree = "<group>"; };
+		F2669A611F4F3C9B00B2A140 /* Legend.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Legend.storyboard; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Legend.storyboard"; sourceTree = "<group>"; };
+		F2669A621F4F3C9B00B2A140 /* LegendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LegendViewController.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/LegendViewController.swift"; sourceTree = "<group>"; };
+		F2669A631F4F3C9B00B2A140 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/MapViewController.swift"; sourceTree = "<group>"; };
+		F2669A641F4F3C9B00B2A140 /* MeasureToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MeasureToolbar.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/MeasureToolbar.swift"; sourceTree = "<group>"; };
+		F2669A651F4F3C9B00B2A140 /* Scalebar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Scalebar.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/Scalebar.swift"; sourceTree = "<group>"; };
+		F2669A661F4F3C9B00B2A140 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewController.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/TableViewController.swift"; sourceTree = "<group>"; };
+		F2669A671F4F3C9B00B2A140 /* UnitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitsViewController.swift; path = "../../../../Documents/arcgis-runtime-toolkit-ios/Toolkit/ArcGISToolkit/UnitsViewController.swift"; sourceTree = "<group>"; };
+		F26D9B1E1F242B8A005706A7 /* projectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = projectViewController.swift; sourceTree = "<group>"; };
+		F28818B41F2443BD000BCA85 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		F28818B61F244425000BCA85 /* globalVars.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globalVars.swift; sourceTree = "<group>"; };
+		F28818B81F245218000BCA85 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		F28818BA1F246CBF000BCA85 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		F28818BC1F247A43000BCA85 /* storyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = storyMapViewController.swift; sourceTree = "<group>"; };
+		F28818C01F250FBC000BCA85 /* donationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = donationVC.swift; sourceTree = "<group>"; };
+		F28818C21F281BFB000BCA85 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
+		F28818C41F286675000BCA85 /* legViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = legViewController.swift; sourceTree = "<group>"; };
+		F2B5C4961F22D36B00576146 /* NGOgraphers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NGOgraphers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B5C4991F22D36B00576146 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2B5C49B1F22D36B00576146 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2B5C49E1F22D36B00576146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2B5C4A01F22D36B00576146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2B5C4A31F22D36B00576146 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2B5C4A51F22D36B00576146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2B5C4CE1F23B44B00576146 /* adelle-sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "adelle-sans.otf"; path = "../../../../Downloads/adelle-sans.otf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2B5C4931F22D36B00576146 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FFFCE3031098BD6793CFBA /* Pods_NGOgraphers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		086FBD1C841AE44A30B4B02C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCB8CD4506578EDA75519876 /* Pods-NGOgraphers.debug.xcconfig */,
+				4C930B2C6AE44B9F45EA6336 /* Pods-NGOgraphers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BBAD86171292786ACC4AE0C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				074CAFC8A0008F3187977EFB /* Pods_NGOgraphers.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2669A5B1F4F3C8200B2A140 /* ArcGISToolkit2 */ = {
+			isa = PBXGroup;
+			children = (
+				F2669A5C1F4F3C9B00B2A140 /* ArcGISToolkit.h */,
+				F2669A5D1F4F3C9B00B2A140 /* Assets.xcassets */,
+				F2669A5E1F4F3C9B00B2A140 /* Coalescer.swift */,
+				F2669A5F1F4F3C9B00B2A140 /* Extensions.swift */,
+				F2669A601F4F3C9B00B2A140 /* Info.plist */,
+				F2669A611F4F3C9B00B2A140 /* Legend.storyboard */,
+				F2669A621F4F3C9B00B2A140 /* LegendViewController.swift */,
+				F2669A631F4F3C9B00B2A140 /* MapViewController.swift */,
+				F2669A641F4F3C9B00B2A140 /* MeasureToolbar.swift */,
+				F2669A651F4F3C9B00B2A140 /* Scalebar.swift */,
+				F2669A661F4F3C9B00B2A140 /* TableViewController.swift */,
+				F2669A671F4F3C9B00B2A140 /* UnitsViewController.swift */,
+			);
+			name = ArcGISToolkit2;
+			sourceTree = "<group>";
+		};
+		F2B5C48D1F22D36B00576146 = {
+			isa = PBXGroup;
+			children = (
+				F2B5C4981F22D36B00576146 /* NGOgraphers */,
+				F2B5C4971F22D36B00576146 /* Products */,
+				086FBD1C841AE44A30B4B02C /* Pods */,
+				BBAD86171292786ACC4AE0C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F2B5C4971F22D36B00576146 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2B5C4961F22D36B00576146 /* NGOgraphers.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2B5C4981F22D36B00576146 /* NGOgraphers */ = {
+			isa = PBXGroup;
+			children = (
+				F2669A5B1F4F3C8200B2A140 /* ArcGISToolkit2 */,
+				F2B5C4CE1F23B44B00576146 /* adelle-sans.otf */,
+				F2B5C4991F22D36B00576146 /* AppDelegate.swift */,
+				F2B5C49B1F22D36B00576146 /* ViewController.swift */,
+				F28818B61F244425000BCA85 /* globalVars.swift */,
+				F2B5C49D1F22D36B00576146 /* Main.storyboard */,
+				F28818C41F286675000BCA85 /* legViewController.swift */,
+				F28818C21F281BFB000BCA85 /* profileViewController.swift */,
+				F28818BC1F247A43000BCA85 /* storyMapViewController.swift */,
+				F28818B81F245218000BCA85 /* CustomButton.swift */,
+				F26D9B1E1F242B8A005706A7 /* projectViewController.swift */,
+				F2B5C4A01F22D36B00576146 /* Assets.xcassets */,
+				F28818BA1F246CBF000BCA85 /* MenuVC.swift */,
+				F28818C01F250FBC000BCA85 /* donationVC.swift */,
+				F28818B41F2443BD000BCA85 /* Graph.swift */,
+				F2B5C4A21F22D36B00576146 /* LaunchScreen.storyboard */,
+				F2B5C4A51F22D36B00576146 /* Info.plist */,
+			);
+			path = NGOgraphers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2B5C4951F22D36B00576146 /* NGOgraphers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2B5C4A81F22D36B00576146 /* Build configuration list for PBXNativeTarget "NGOgraphers" */;
+			buildPhases = (
+				F889CA41D796BC91D1EB59C2 /* [CP] Check Pods Manifest.lock */,
+				F2B5C4921F22D36B00576146 /* Sources */,
+				F2B5C4931F22D36B00576146 /* Frameworks */,
+				F2B5C4941F22D36B00576146 /* Resources */,
+				1C14B0578E5F539B07E6F950 /* [CP] Embed Pods Frameworks */,
+				ECB84BF8D0A2AEA60A26D27C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NGOgraphers;
+			productName = NGOgraphers;
+			productReference = F2B5C4961F22D36B00576146 /* NGOgraphers.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2B5C48E1F22D36B00576146 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Rishab Ramanathan";
+				TargetAttributes = {
+					F2B5C4951F22D36B00576146 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = ZC4TSFXQ59;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F2B5C4911F22D36B00576146 /* Build configuration list for PBXProject "NGOgraphers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2B5C48D1F22D36B00576146;
+			productRefGroup = F2B5C4971F22D36B00576146 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2B5C4951F22D36B00576146 /* NGOgraphers */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2B5C4941F22D36B00576146 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2669A6B1F4F3C9B00B2A140 /* Info.plist in Resources */,
+				F2669A581F4F385C00B2A140 /* Info.plist in Resources */,
+				F2B5C4A41F22D36B00576146 /* LaunchScreen.storyboard in Resources */,
+				F2B5C4CF1F23B44B00576146 /* adelle-sans.otf in Resources */,
+				F2669A681F4F3C9B00B2A140 /* Assets.xcassets in Resources */,
+				F2B5C4A11F22D36B00576146 /* Assets.xcassets in Resources */,
+				F2669A6C1F4F3C9B00B2A140 /* Legend.storyboard in Resources */,
+				F2B5C49F1F22D36B00576146 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C14B0578E5F539B07E6F950 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGOgraphers/Pods-NGOgraphers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECB84BF8D0A2AEA60A26D27C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NGOgraphers/Pods-NGOgraphers-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F889CA41D796BC91D1EB59C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2B5C4921F22D36B00576146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28818C51F286675000BCA85 /* legViewController.swift in Sources */,
+				F28818B91F245218000BCA85 /* CustomButton.swift in Sources */,
+				F2B5C49C1F22D36B00576146 /* ViewController.swift in Sources */,
+				F28818C11F250FBC000BCA85 /* donationVC.swift in Sources */,
+				F2669A6F1F4F3C9B00B2A140 /* MeasureToolbar.swift in Sources */,
+				F28818BB1F246CBF000BCA85 /* MenuVC.swift in Sources */,
+				F2669A6D1F4F3C9B00B2A140 /* LegendViewController.swift in Sources */,
+				F2669A711F4F3C9B00B2A140 /* TableViewController.swift in Sources */,
+				F28818B51F2443BD000BCA85 /* Graph.swift in Sources */,
+				F2B5C49A1F22D36B00576146 /* AppDelegate.swift in Sources */,
+				F26D9B1F1F242B8A005706A7 /* projectViewController.swift in Sources */,
+				F2669A6A1F4F3C9B00B2A140 /* Extensions.swift in Sources */,
+				F2669A721F4F3C9B00B2A140 /* UnitsViewController.swift in Sources */,
+				F28818B71F244425000BCA85 /* globalVars.swift in Sources */,
+				F28818C31F281BFB000BCA85 /* profileViewController.swift in Sources */,
+				F28818BD1F247A43000BCA85 /* storyMapViewController.swift in Sources */,
+				F2669A6E1F4F3C9B00B2A140 /* MapViewController.swift in Sources */,
+				F2669A691F4F3C9B00B2A140 /* Coalescer.swift in Sources */,
+				F2669A701F4F3C9B00B2A140 /* Scalebar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2B5C49D1F22D36B00576146 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B5C49E1F22D36B00576146 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2B5C4A21F22D36B00576146 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2B5C4A31F22D36B00576146 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2B5C4A61F22D36B00576146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2B5C4A71F22D36B00576146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2B5C4A91F22D36B00576146 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB8CD4506578EDA75519876 /* Pods-NGOgraphers.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZC4TSFXQ59;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = NGOgraphers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Rish-apps.NGOgraphers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F2B5C4AA1F22D36B00576146 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C930B2C6AE44B9F45EA6336 /* Pods-NGOgraphers.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = ZC4TSFXQ59;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = NGOgraphers/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Rish-apps.NGOgraphers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2B5C4911F22D36B00576146 /* Build configuration list for PBXProject "NGOgraphers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B5C4A61F22D36B00576146 /* Debug */,
+				F2B5C4A71F22D36B00576146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2B5C4A81F22D36B00576146 /* Build configuration list for PBXNativeTarget "NGOgraphers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2B5C4A91F22D36B00576146 /* Debug */,
+				F2B5C4AA1F22D36B00576146 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2B5C48E1F22D36B00576146 /* Project object */;
+}

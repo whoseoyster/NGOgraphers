@@ -1,0 +1,24 @@
+PODS:
+  - ArcGIS-Runtime-SDK-iOS (100.1.0)
+  - ArcGIS-Runtime-Toolkit-iOS (100.1.0):
+    - ArcGIS-Runtime-SDK-iOS (~> 100.1.0)
+  - Material (2.7.1):
+    - Material/Core (= 2.7.1)
+  - Material/Core (2.7.1)
+  - SideMenu (2.3.3)
+
+DEPENDENCIES:
+  - ArcGIS-Runtime-SDK-iOS (= 100.1)
+  - ArcGIS-Runtime-Toolkit-iOS
+  - Material (~> 2.0)
+  - SideMenu
+
+SPEC CHECKSUMS:
+  ArcGIS-Runtime-SDK-iOS: 9b9c2478c974ef0b704b853948a19227f3124ceb
+  ArcGIS-Runtime-Toolkit-iOS: 9edfdfb9bd793729af15f4744210985c36fc2431
+  Material: 13071c7cd340d54b4f9c839b386338a1e082b25e
+  SideMenu: a447554ae5c982e8077666389e1c8b0c8656e065
+
+PODFILE CHECKSUM: 8535a5435ca2e85b00ce2310a124b7a4499ec114
+
+COCOAPODS: 1.2.0
