@@ -1,2 +1,2 @@
 # NGOgraphers
-Esri 2017 Intern Hackathon Project
+Our Esri 2017 Intern Hackathon Project, coded in Swift.
